@@ -1,0 +1,8 @@
+FROM translategemma-4b-it-q4_k_m.gguf
+
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+
+TEMPLATE """{{ .Prompt }}"""
+
+SYSTEM """Sei un traduttore professionista. Traduci il testo fornito nella lingua richiesta. Restituisci solo la traduzione, senza spiegazioni."""
